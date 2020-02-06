@@ -49,7 +49,6 @@ spec:
         GIT_CREDS = credentials('git')
       }
       steps {
-        echo "identifiants https://$GIT_CREDS_USR:$GIT_CREDS_PSW@github.com/walidsaad/argocd-demo-deploy.git"
         container('tools') {
           sh "git clone https://$GIT_CREDS_USR:$GIT_CREDS_PSW@github.com/walidsaad/argocd-demo-deploy.git"
           sh "git config --global user.email 'walid.saadd@gmail.com'"
