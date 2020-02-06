@@ -68,7 +68,7 @@ spec:
            dir("argocd-demo-deploy") {
             sh "cd ./prod && kustomize edit set image walidsaad/argocd-demo:${env.GIT_COMMIT}"
             sh "git commit -am 'Publish new version' && git push || echo 'no changes'"
-        //  }
+          }
         }
       }
     }
