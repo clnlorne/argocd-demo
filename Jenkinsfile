@@ -56,7 +56,7 @@ spec:
          // dir("argocd-demo-deploy") {
            // sh "cd ./e2e && kustomize edit set image alexmt/argocd-demo:${env.GIT_COMMIT}"
            // sh "git commit -am 'Publish new version' && git push || echo 'no changes'"
-          }
+          //}
         }
       }
     }
@@ -68,10 +68,10 @@ spec:
           //dir("argocd-demo-deploy") {
             //sh "cd ./prod && kustomize edit set image alexmt/argocd-demo:${env.GIT_COMMIT}"
            // sh "git commit -am 'Publish new version' && git push || echo 'no changes'"
-          }
+        //  }
         }
       }
     }
   }
 }
-  
+
