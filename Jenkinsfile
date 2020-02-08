@@ -51,7 +51,7 @@ spec:
       steps {
         container('tools') {
           sh('''
-                git config --local credential.helper "!f() { echo username=\\$GIT_CREDS_USR; echo password=\\$GIT_CREDS_PSW; }; f"
+                git config --global credential.helper "!f() { echo username=\\$GIT_CREDS_USR; echo password=\\$GIT_CREDS_PSW; }; f"
             ''')
           //sh "git clone https://$GIT_CREDS_USR:$GIT_CREDS_PSW@github.com/walidsaad/argocd-demo-deploy.git"
           sh "git clone https://github.com/walidsaad/argocd-demo-deploy.git"
